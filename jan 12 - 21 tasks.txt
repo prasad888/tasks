@@ -1,0 +1,77 @@
+12/01/2021
+
+ we have done created a repos in the github (apache, nginx, tomcat)
+ in the git repos we have written a Dcokerfile and one coding file
+
+ we do the CI flow to use through jenkins every repo code can we bring to the workspace
+
+ and we create a cluster and deploy a project to outside 
+
+
+
+12/01/2021
+
+ CICD flow ( upto CI process )
+
+ i have send to the code in to the jenkins workspace (apache, nginx, tomcat)
+the code  i have pushed to the ECR repos and the s3 bucket
+
+In the jenkins I have done the passwordless setup to jenkins using the visudo file modification.
+
+same permission i have given to the one more 
+vi /etc/sudoers.d/90-cloud-init-users
+( ec2-user access password = no 
+   jenkins access password = no )
+
+activated for the passwordless setup 
+....
+ i have done the every machine to github ssh-keygen also have done the bastion to every machine ssh-keygen.
+ 
+ 
+ 16/01/2021
+ 
+ Deploying the war file in the kubernetes to taking the tomcat image
+
+using the files
+service.yaml
+deployment.yml
+
+and to access the outside to using the load balancer end point or the  our DNS name
+
+
+
+18/01/2021
+
+Ansible
+
+installed the ansible and launched the one apache using the ansible playbook
+
+today will do the install nginx and tomcat using the ansible
+Installed the ansible in one ec2 machine.
+
+Crated 2 slaves in one slave i have installed the Apache using the ansible playbook.
+
+
+
+19/01/2021 daily activity
+
+yesterday was pending the ansible doc and installation and script 
+
+we will continue the today ansible playbooks concept 
+
+
+20-01-2021
+
+creating a glue 
+  creating crawler
+  creating jobs
+  creating the role
+
+checks the results in the S3 bucket
+
+-----------------------------
+
+knowing about the kinesis 
+and so the one project on the kinesis
+
+
