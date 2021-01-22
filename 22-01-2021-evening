@@ -1,0 +1,43 @@
+in one project they have the front-end and back-end
+
+front-end
+
+running the static files 
+and
+react js is the yding the front-end
+
+back-end are 
+python &
+jango using
+
+
+front-end
+
+we using the s3 bucket
+static websites are hosting in s3
+
+----------------------------------
+
+hosting the satic website using the s3 buskcet
+
+create a bucket with public access
+-
+ interst the objects to the bucket
+ in the bucket have the index.html file
+
+----
+in there go to the bucket properties
+- static website hosting
+- - enable the static website hosting
+- hosting type 
+- - host a static website
+- index document 
+- - index.html
+
+--
+make the public the index.html file
+
+and run the bucket address to the out side it will run the out side to the static web site
+
+
+
