@@ -1,0 +1,43 @@
+Today I have done the topics
+
+displayed the picture on the web site using the web server 
+
+created a repo on github and pushed the photo to the git hub
+
+done the SSH through the instance to github
+
+cloned the repo from the github using the git clone
+
+the photo copied to the location is (/var/www/html/)
+
+writed the index.html file on the location is (/var/www/html)
+	
+	<center><h1>This is the photo</h1><img src="photo.jpeg" heigth="300" width="300" alt="photo" ></center>
+
+using the html language deployed the imgage to the GUI
+
+
+and knowing about the kubertes topics these are
+
+Blue & Green strategy
+
+Blue deplyment is the live one we have any update then using the green deplyment for the upgradtion
+green deployment for the new upcoming live deployment 
+
+slowly sending the data to blue monitering the logs with-out any errors after coming the total blue to green
+
+green was changed to the blue color and blue was deleted or backuped
+
+&&&&&&&&&&&&&&&&&
+
+Rolling update in kubernates
+
+in the ec2 or pods create the new one
+and slowly one-by-one move the old to new instance with-out any failure logs
+and after sending the all data to new one then delete the old instance or pod 
+
+It's the rollingupdate
+
+
+Thanks & Regards
+K.KamalanadhaReddy

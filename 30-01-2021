@@ -1,0 +1,9 @@
+today have done the installed the appache using the ansible playbook
+
+and
+
+today have installed the eksctl(Kubernates)
+
+and launched the 2 applications using the deployment file , service file & ingress file
+using the tomcat and apache images
+
