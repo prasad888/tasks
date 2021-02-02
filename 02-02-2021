@@ -1,0 +1,47 @@
+written the ansible playbooks for
+	tomcat
+	nginx
+	apache
+	
+deployed a static image on the apache using the ansible playbook
+
+new tasks
+login to the ec2-machine without using the pemfile
+@@@@@@@@@@@@@@@@@@@@
+
+1. Login to your EC2 instance using your .pem file
+
+ssh -i your_pem_file.pem ubuntu@ec2-________.compute-1.amazonaws.com
+2. Create a new user that will access the instance using a password:
+
+$ sudo useradd -s /bin/bash -m -d /home/USERNAME  -g root USERNAME
+where:
+
+-s /bin/bash : use /bin/bash as the standard shell
+-m -d /home/USERNAME : create a home directory at /home/USERNAME
+-g root : add to group root
+USERNAME : the username of the new user
+3. Create a strong password for the new user:
+
+$ sudo passwd USERNAME
+Enter new UNIX password:
+Retype new UNIX password:
+4. Add user to sudoers file by using sudo visudo and add the following line:
+
+USERNAME  ALL=(ALL:ALL) ALL
+
+5. Enable password authentication by editing /etc/ssh/sshd_config: change PasswordAuthentication no to PasswordAuthentication yes
+Port 22
+PasswordAuthentication yes
+PermitRootLogin yes
+
+6. Restart ssh:
+
+service sshd restart or systemctl restart sshd
+
+7. Set password, passwd
+
+8. Log out and log back in without .pem file ssh root@12.345.67.890
+
+$ ssh USERNAME@ec2-________.compute-1.amazonaws.com
+USERNAME@ec2-________.compute-1.amazonaws.com's password:
