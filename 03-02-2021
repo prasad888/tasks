@@ -1,0 +1,15 @@
+ansible
+
+in the ansible we have done the secrets saved encryption and decryption
+
+ansible-inventory create secrets.yaml
+ansible-inventory encrypt secrets.yaml
+
+once we need to decrypt then we do the 
+
+ansible-inventory decrypt secrets.yaml
+
+
+then we do the secrets saving the with security purpose
+
+
