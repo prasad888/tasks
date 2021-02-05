@@ -1,0 +1,6 @@
+in kubernetes have done the two domains and sinlgle loadbalencer
+
+using the ingress controler host based
+
+---
+have done the horizontal auto scaling pods
