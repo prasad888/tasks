@@ -1,0 +1,9 @@
+created the fargate cluster using the 
+
+eksctl create cluster \
+--name fargate-cluster \
+--region ap-southeast-1 \
+--fargate
+
+
+with out the nodes created the cluster
