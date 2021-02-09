@@ -1,0 +1,16 @@
+Pipeline project in jenkins
+
+pipeline script
+
+syntax:-
+
+pipeline{
+	agent(any){
+		}
+		stages{
+			stage{
+			}
+			stage{
+			}
+		}
+
