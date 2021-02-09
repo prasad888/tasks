@@ -1,0 +1,9 @@
+have done the process of the kubeadm installation
+in our local machine
+
+--steps--
+open the command prompt "Run as a admistration"
+download the kubectl using the curl command
+instal the VM ware box in the local machine
+inastall the kubeadm in the loca
+
