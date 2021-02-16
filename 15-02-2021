@@ -1,0 +1,22 @@
+ Docker Networking
+
+ Docker networking allows you to attach a container to as many networks as you like.
+
+ docker network connect my_network web
+
+ Refered link for the docker networking
+
+ 	https://docs.docker.com/engine/tutorials/networkingcontainers/#:~:text=Docker%20networking%20allows%20you%20to,and%20try%20the%20ping%20command.
+
+
+ docker have the multiple networks
+ 	Bridge	-	default network 
+	host	-	removes the isolation between the containers
+	overlay	-	Networks connect multiple Docker daemons together & enable swarm services to communicate to each other.
+	macvlan	-	assaign to allocate the MAC address. making it apear a physical device.
+	none	-	disable the all networks
+
+	third-party-networks	-	allows the docker with specialised networks.
+
+
+ Reference from the : https://docs.docker.com/network/
