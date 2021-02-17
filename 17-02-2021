@@ -1,0 +1,36 @@
+Have done created the jenkins pipeline for the CICD for deployemnt to the kubernetes
+
+using the jenkins declarative pipeline script
+
+pipeline {
+    agent any
+  options {
+    // Keep the 10 most recent builds
+    buildDiscarder(logRotator(numToKeepStr:'10'))
+  }
+     stages {
+     stage('checkout'){
+         steps{
+             checkout([$class: 'GitSCM', branches: [[name: 'master']], extensions: [], userRemoteConfigs: [[credentialsId: '4cb5be37-9c1d-49dc-a83f-1763c000d23b', url: 'https://github.com/Kamalanadh-Reddy/docker-tomcat-tutorial.git']]])
+         }
+         }
+    stage('ECR-upload') {
+         steps {
+            sh 'aws ecr get-login-password --region ap-southeast-1 | sudo docker login --username AWS --password-stdin 999640821553.dkr.ecr.ap-southeast-1.amazonaws.com'
+            sh 'sudo docker build -t 999640821553.dkr.ecr.ap-southeast-1.amazonaws.com/docker-tomcat .'
+			sh 'sudo docker push 999640821553.dkr.ecr.ap-southeast-1.amazonaws.com/docker-tomcat:latest'
+
+         }
+      }
+      stage('Deploy') {
+         steps {
+           sh 'sudo sudo kubectl apply -f /var/lib/jenkins/tom/deploy.yaml -n kamal'
+           sh 'sudo kubectl apply -f /var/lib/jenkins/tom/service.yaml -n kamal'
+           sh 'sudo kubectl apply -f /var/lib/jenkins/tom/ingress.yaml -n kamal'
+           //sh  'scp index.html root@10.0.1.150:/usr/share/nginx/html/index.html'
+
+          }
+        }
+
+   }
+}
